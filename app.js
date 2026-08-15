@@ -56,3 +56,47 @@ function initViennaMap() {
 }
 
 document.addEventListener('DOMContentLoaded', initViennaMap);
+
+const knownLabels = {
+  'hitlermarywithjesus.jpg!Blog.jpg': 'Mary with Jesus',
+  'Screenshot_2026-08-01-22-11-10-29_40deb401b9ffe8e1df2f1cc5ba480b12.webp': 'The Opera on the Ring, Vienna · 1913 (?)',
+  'Screenshot_2026-08-01-21-55-25-17_40deb401b9ffe8e1df2f1cc5ba480b12.webp': 'Vienna: Minorite Church, New Market, Burg Theater',
+  'Screenshot_2026-08-01-21-56-11-55_40deb401b9ffe8e1df2f1cc5ba480b12.webp': "Courtyard of Schubert's House in Vienna · 1908 (?)",
+};
+
+async function initCatalogue() {
+  const grid = document.querySelector('#catalogue-grid');
+  const search = document.querySelector('#catalogue-search');
+  const empty = document.querySelector('#catalogue-empty');
+  if (!grid || !search) return;
+  const response = await fetch('catalogue.json');
+  const items = await response.json();
+  let activeFilter = 'all';
+
+  const render = () => {
+    const query = search.value.trim().toLowerCase();
+    const filtered = items.filter((item) => {
+      const matchesFilter = activeFilter === 'all' || (activeFilter === 'book' ? item.kind === 'Страница книги' : item.kind !== 'Страница книги');
+      const label = knownLabels[item.original] || '';
+      return matchesFilter && `${item.search} ${label}`.includes(query);
+    });
+    grid.innerHTML = filtered.map((item) => {
+      const label = knownLabels[item.original] || (item.kind === 'Страница книги' ? 'Страница книги · подпись требует сверки' : 'Изображение из набора · атрибуция требует сверки');
+      return `<article class="catalogue-card"><div class="catalogue-thumb"><img loading="lazy" src="${item.thumbnail}" alt="${label}" /></div><div class="catalogue-meta"><span class="catalogue-number mono">${String(item.id).padStart(3, '0')}</span><span class="mono">${item.kind === 'Страница книги' ? 'КНИГА' : 'РАБОТА'}</span></div><h3 class="catalogue-title">${label}</h3><p class="catalogue-type">${item.original}</p></article>`;
+    }).join('');
+    empty.hidden = filtered.length !== 0;
+  };
+
+  document.querySelectorAll('.filter-button').forEach((button) => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.filter-button').forEach((item) => item.classList.remove('is-active'));
+      button.classList.add('is-active');
+      activeFilter = button.dataset.filter;
+      render();
+    });
+  });
+  search.addEventListener('input', render);
+  render();
+}
+
+document.addEventListener('DOMContentLoaded', initCatalogue);
