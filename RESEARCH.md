@@ -33,8 +33,18 @@ Direct image URLs checked:
 - https://upload.wikimedia.org/wikipedia/commons/a/a1/Adolf_Hitler_-_Selbstportr%C3%A4t.jpg
 - https://upload.wikimedia.org/wikipedia/commons/7/7d/Adolf_Hitler_Der_Alte_Hof.jpg
 
-## Основной книжный источник
+## Primary book: Internet Archive
 
-Запись Internet Archive подтверждает: *Adolf Hitler, the unknown artist*, Hitler, Adolf, 1889–1945, Houston, Texas: B.F. Price, 1984, 260 страниц. Это перевод немецкого издания *Adolf Hitler als Maler und Zeichner*. Полный текст имеет ограниченный доступ, поэтому проект ссылается на библиографическую запись и не воспроизводит страницы книги без разрешения.
+The supplied Internet Archive item is **Adolf Hitler, the unknown artist**, credited to Hitler, Adolf, 1889–1945, with publication date **1984**, publisher **B.F. Price (Houston, Texas)**, 260 pages, and the note “Translation of: Adolf Hitler als Maler und Zeichner.” The item is access-restricted, so the project should cite the record and bibliographic metadata rather than reproduce the book or quote unseen pages. Record: https://archive.org/details/adolfhitlerunkno0000hitl
 
-Источник: https://archive.org/details/adolfhitlerunkno0000hitl
+The user called the book “1984”/“2984”; the catalog record confirms **1984**.
+
+## Availability check for gallery descriptions
+
+The Archive.org record exposes bibliographic metadata, a Bookreader preview label, and 961 previews, but explicitly marks the item as `Access-restricted-item: true` and offers no suitable downloadable files. Therefore, descriptions of individual works should not be presented as direct quotations or as verified book text unless the user supplies readable pages or another lawful full-text source. The site can still add a gallery based on verified Commons metadata and clearly label descriptions as catalogue/context notes rather than claims extracted from unseen pages.
+
+## Additional Commons catalogue candidates
+
+Wikimedia Commons category `Paintings by Adolf Hitler` lists 81 files, including candidates with explicit date/title cues such as *Abend im Gebirge* (1908), *Morgen am Bergsee* (1908), *Bauernhaus in den Bergen* (1909), *Hohe Burg* (1909), *Landschaft im Salzburger Land* (1909), *Karlskirche* (1910/1912), *Klosterneuburg* (1911), *Munich Old Town Hall* (1913), *Dr Bloch house* (1913), *Frühlingsstrauß im Fenster* (1914), *Wien Oper*, *Wiener Minoritenkirche*, *Hofbräuhaus*, *Neuschwanstein Castle*, and *Architectural drawing by Hitler*. Category page: https://commons.wikimedia.org/wiki/Category:Paintings_by_Adolf_Hitler
+
+The category itself states that individual files carry their own license terms and that additional terms may apply. No image should be copied into the project without checking its file page, license, source, and attribution individually.
