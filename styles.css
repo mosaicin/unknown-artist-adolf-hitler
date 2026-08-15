@@ -62,6 +62,21 @@ figcaption { display: flex; justify-content: space-between; gap: 12px; margin-to
 .work-card h3 { margin: 20px 0 12px; font: 400 clamp(2rem, 3vw, 3.45rem)/1.05 var(--display); letter-spacing: -.05em; }
 .work-card p { max-width: 410px; color: var(--muted); font-size: .92rem; }
 .source-link { display: inline-block; margin-top: 12px; padding-bottom: 5px; border-bottom: 1px solid currentColor; color: var(--ink); text-decoration: none; font: 600 .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.map-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr); gap: 28px; margin-top: 70px; }
+.vienna-map { min-height: 560px; background: #d7d0c4; border: 1px solid var(--ink); filter: saturate(.72) sepia(.12); }
+.leaflet-container { font: 12px var(--mono); background: #d7d0c4; }
+.leaflet-control-attribution { font: 9px var(--mono); }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--paper); color: var(--ink); border-radius: 0; }
+.leaflet-popup-content { font: 13px var(--sans); line-height: 1.45; }
+.map-panel { border-top: 1px solid var(--ink); }
+.map-panel-head { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--ink); }
+.map-list { display: grid; }
+.map-point { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 17px 0; border-bottom: 1px solid rgba(24,24,24,.35); color: var(--ink); background: none; text-align: left; cursor: pointer; }
+.map-point:hover .map-point-title { color: var(--red); }
+.map-point-index { color: var(--red); }
+.map-point-title { font: 400 1.45rem/1.05 var(--display); transition: color .2s ease; }
+.map-point-note { display: block; margin-top: 5px; color: var(--muted); font-size: .82rem; }
+.map-footnote { margin-top: 18px; color: var(--muted); font-size: .82rem; }
 .timeline { position: relative; margin-top: 95px; margin-left: 192px; padding-left: 54px; border-left: 1px solid var(--ink); }
 .timeline::before { content: ''; position: absolute; left: -4px; top: 0; width: 7px; height: 7px; background: var(--red); }
 .timeline-item { position: relative; display: grid; grid-template-columns: 150px 1fr 1fr; gap: 28px; padding: 32px 0; border-bottom: 1px solid var(--line); }
@@ -94,7 +109,7 @@ figcaption { display: flex; justify-content: space-between; gap: 12px; margin-to
   .hero-intro { font-size: .95rem; }
   .hero-art { align-self: center; width: min(100%, 490px); }
   .hero-note { position: static; align-self: flex-end; }
-  .works-section, .context-section, .sources-section { padding: 88px 0; }
+  .works-section, .map-section, .context-section, .sources-section { padding: 88px 0; }
   .section-heading { display: block; }
   .section-heading > span { display: block; margin-bottom: 25px; }
   .section-heading > p { margin-top: 28px; }
@@ -102,6 +117,10 @@ figcaption { display: flex; justify-content: space-between; gap: 12px; margin-to
   .work-card--portrait { padding-top: 0; }
   .work-card--portrait .work-image { max-width: none; width: 68%; margin-left: auto; }
 .work-card--secondary .work-image { aspect-ratio: 1.25; }
+  .map-layout { grid-template-columns: 1fr; margin-top: 48px; }
+  .vienna-map { min-height: 420px; }
+  .map-panel-head { font-size: 10px; }
+  .map-point-title { font-size: 1.7rem; }
   .timeline { margin: 60px 0 0 18px; padding-left: 27px; }
   .timeline-item { display: block; padding: 26px 0; }
   .timeline-item h3 { margin: 10px 0; }

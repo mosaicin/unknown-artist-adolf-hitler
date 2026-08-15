@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3D9p3w8M0t7YfZkY6y5x8XbJb5Q0=" crossorigin="" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -16,13 +17,14 @@
       <a class="wordmark" href="#top" aria-label="На главную">N/A <span>архив</span></a>
       <nav class="main-nav" aria-label="Основная навигация">
         <a href="#works">Работы</a>
+        <a href="#map">Карта</a>
         <a href="#context">Контекст</a>
         <a href="#sources">Источники</a>
       </nav>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">Меню</button>
     </header>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация">
-      <a href="#works">Работы</a><a href="#context">Контекст</a><a href="#sources">Источники</a>
+      <a href="#works">Работы</a><a href="#map">Карта</a><a href="#context">Контекст</a><a href="#sources">Источники</a>
     </nav>
 
     <main id="top">
@@ -68,8 +70,13 @@
         </div>
       </section>
 
+      <section id="map" class="map-section section-shell">
+        <div class="section-heading"><span class="mono">02 — ГЕОГРАФИЯ</span><h2>Вена<br /><em>как мотив</em></h2><p>Интерактивная карта связывает книжные подписи с современными координатами исторических мест. Маркер показывает место, а карточка — какую работу или группу работ с ним связывает каталог.</p></div>
+        <div class="map-layout"><div id="vienna-map" class="vienna-map" aria-label="Интерактивная карта исторических мест Вены"></div><aside class="map-panel"><div class="map-panel-head"><span class="mono">ПЯТЬ ТОЧЕК</span><span class="mono">ВЕНА / 1908—1913</span></div><div id="map-list" class="map-list"></div><p class="map-footnote">Координаты обозначают реальные места в современной Вене. Привязка картины к конкретной точке действует только там, где её поддерживает книжная подпись или название работы.</p></aside></div>
+      </section>
+
       <section id="context" class="context-section section-shell">
-        <div class="section-heading"><span class="mono">02 — КОНТЕКСТ</span><h2>До политики<br /><em>и после</em></h2></div>
+        <div class="section-heading"><span class="mono">03 — КОНТЕКСТ</span><h2>До политики<br /><em>и после</em></h2></div>
         <div class="timeline"><div class="timeline-item"><span class="mono">ВЕНА / 1909—1913</span><h3>Акварель как ремесло</h3><p>Ранние венские работы связаны с небольшими видами улиц, зданий и пейзажей. В каталожной традиции их важно рассматривать как коммерческое ремесло и работу с мотивами, а не как доказательство академического признания.</p></div><div class="timeline-item"><span class="mono">АРХИТЕКТУРА</span><h3>Эскизы зданий</h3><p>В архитектурных эскизах внимание сосредоточено на силуэте, фасаде и перспективе. Такие изображения позволяют обсуждать привычку копировать и стилизовать виды, но не заменяют атрибутику конкретного произведения.</p></div><div class="timeline-item"><span class="mono">1907 / 1908</span><h3>Две попытки</h3><p>Венская академия изобразительных искусств дважды отклонила кандидатуру Гитлера. По опубликованным историческим очеркам, его рисунки сочли неудовлетворительными.</p></div>
           <div class="timeline-item"><span class="mono">1909—1913</span><h3>Открытки и виды</h3><p>В Вене он продавал небольшие акварели и виды архитектуры, часто работая с мотивами, скопированными с открыток. Коммерческий успех был ограниченным.</p></div>
           <div class="timeline-item"><span class="mono">1914—1945</span><h3>Атрибуция как проблема</h3><p>После Первой мировой войны художественная практика прекратилась. Сохранившиеся и приписываемые ему работы стали объектами споров, торгов и подделок.</p></div>
@@ -78,11 +85,12 @@
       </section>
 
       <section id="sources" class="sources-section section-shell">
-        <div class="section-heading"><span class="mono">03 — МЕТОД</span><h2>Не музей<br /><em>личности</em></h2></div>
+        <div class="section-heading"><span class="mono">04 — МЕТОД</span><h2>Не музей<br /><em>личности</em></h2></div>
         <div class="sources-layout"><div class="statement"><p>Основной библиографический ориентир проекта — книга <em>Adolf Hitler, the unknown artist</em>, издание B.F. Price, 1984. Запись Internet Archive указывает, что это перевод немецкого каталога <em>Adolf Hitler als Maler und Zeichner</em>; доступ к полному тексту ограничен, поэтому сайт не воспроизводит страницы книги, а ссылается на её библиографическую запись.</p><p>Этот проект не прославляет Адольфа Гитлера, нацистскую идеологию или связанные с ними преступления. Он использует художественные объекты как повод говорить об исторической памяти, неустойчивой атрибуции и механике культурного мифа.</p><p>Формулировка «приписывается» используется намеренно: независимые сообщения о торгах и конфискациях показывают, что часть подобных работ становилась предметом расследований о возможной подделке.</p></div><div class="source-list"><a class="source-primary" href="https://archive.org/details/adolfhitlerunkno0000hitl" target="_blank" rel="noreferrer"><span>00</span><strong>Основной каталог</strong><br />Internet Archive · Adolf Hitler, the unknown artist · 1984 ↗</a><a href="https://ru.wikipedia.org/wiki/Картины_Адольфа_Гитлера" target="_blank" rel="noreferrer"><span>01</span>Википедия · Картины Адольфа Гитлера ↗</a><a href="https://www.history.com/articles/adolf-hitler-artist-paintings-vienna" target="_blank" rel="noreferrer"><span>02</span>HISTORY · When Hitler Tried (and Failed) to Be an Artist ↗</a><a href="https://www.bbc.com/news/world-europe-46995480" target="_blank" rel="noreferrer"><span>03</span>BBC News / Reuters · Suspected forgeries ↗</a><a href="https://www.abc.net.au/news/2019-02-11/paintings-attributed-to-adolf-hitler-fail-to-sell-at-auction/10798848" target="_blank" rel="noreferrer"><span>04</span>ABC News · Auction and authenticity concerns ↗</a></div></div>
       </section>
     </main>
     <footer class="site-footer section-shell"><span class="mono">N/A ARCHIVE · 2026</span><span>Исторический проект без апологии</span><a href="#top">Наверх ↑</a></footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="app.js"></script>
   </body>
 </html>
