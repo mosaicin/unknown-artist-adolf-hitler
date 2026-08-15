@@ -32,3 +32,9 @@ The Commons file page for `Adolf Hitler Der Alte Hof.jpg` identifies the work as
 Direct image URLs checked:
 - https://upload.wikimedia.org/wikipedia/commons/a/a1/Adolf_Hitler_-_Selbstportr%C3%A4t.jpg
 - https://upload.wikimedia.org/wikipedia/commons/7/7d/Adolf_Hitler_Der_Alte_Hof.jpg
+
+## Основной книжный источник
+
+Запись Internet Archive подтверждает: *Adolf Hitler, the unknown artist*, Hitler, Adolf, 1889–1945, Houston, Texas: B.F. Price, 1984, 260 страниц. Это перевод немецкого издания *Adolf Hitler als Maler und Zeichner*. Полный текст имеет ограниченный доступ, поэтому проект ссылается на библиографическую запись и не воспроизводит страницы книги без разрешения.
+
+Источник: https://archive.org/details/adolfhitlerunkno0000hitl
