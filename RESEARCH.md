@@ -35,13 +35,13 @@ Direct image URLs checked:
 
 ## Primary book: Internet Archive
 
-The supplied Internet Archive item is **Adolf Hitler, the unknown artist**, credited to Hitler, Adolf, 1889–1945, with publication date **1984**, publisher **B.F. Price (Houston, Texas)**, 260 pages, and the note “Translation of: Adolf Hitler als Maler und Zeichner.” The item is access-restricted, so the project should cite the record and bibliographic metadata rather than reproduce the book or quote unseen pages. Record: https://archive.org/details/adolfhitlerunkno0000hitl
+The supplied Internet Archive item is **Adolf Hitler, the unknown artist**, credited to Hitler, Adolf, 1889–1945, with publication date **1984**, publisher **B.F. Price (Houston, Texas)**, 260 pages, and the note “Translation of: Adolf Hitler als Maler und Zeichner.” The item is access-restricted. The site uses only separately uploaded user-provided page screenshots as documentary plates and does not reproduce the complete book or claim access to unseen pages. Record: https://archive.org/details/adolfhitlerunkno0000hitl
 
 The user called the book “1984”/“2984”; the catalog record confirms **1984**.
 
 ## Availability check for gallery descriptions
 
-The Archive.org record exposes bibliographic metadata, a Bookreader preview label, and 961 previews, but explicitly marks the item as `Access-restricted-item: true` and offers no suitable downloadable files. Therefore, descriptions of individual works should not be presented as direct quotations or as verified book text unless the user supplies readable pages or another lawful full-text source. The site can still add a gallery based on verified Commons metadata and clearly label descriptions as catalogue/context notes rather than claims extracted from unseen pages.
+The Archive.org record exposes bibliographic metadata, a Bookreader preview label, and 961 previews, but explicitly marks the item as `Access-restricted-item: true` and offers no suitable downloadable files. Therefore, descriptions of individual works should not be presented as direct quotations from unseen pages. For the current site, readable pages supplied by the user are treated as documentary source material; unresolved entries remain labelled as requiring verification. The site does not claim access to the complete book.
 
 ## Additional Commons catalogue candidates
 
